@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<title>Mouse Wheel Tab Scroll</title>
+<script src="options.js"></script>
+<style>
+#settings {
+	margin: 10px;
+}
+</style>
+</head>
+<body>
+<h1>Mouse Wheel Tab Scroll</h1>
+
+<div>
+Hold shift key or right mouse button and scroll mouse wheel to scroll through
+tabs. Scrolling with right mouse button doesn't work with GTK+ version (Linux)
+because it shows context-menu on mouse press and changing it to mouse release
+would break user experience.
+</div>
+
+<div>
+It doesn't work with <code>chrome://...</code> and
+<code>chrome-extension://...</code> URLs (like PDF.js tabs), i.e. if you scroll
+on such tab you won't be able to scroll away from it. 
+</div>
+
+<div id=settings>
+	<div>
+		<label>Minimum scroll offset in pixels for one tab switch</label>
+		<input id=minOffset type=number />
+	</div>
+
+	<div>
+		<label>When scrolling forward, switch to tab to the</label>
+		<input id=rightScroll name=side type=radio value=1 >right</input>
+		<input id=leftScroll name=side type=radio value=-1 >left</input>
+	</div>
+
+	<button id=save>Save</button>
+</div>
+
+</body>
+</html>

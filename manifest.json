@@ -1,0 +1,18 @@
+{
+	"manifest_version": 2,
+	"name": "Mouse Wheel Tab Scroll",
+	"description": "Scroll tabs with modifier (shift key or right mouse button) and mouse wheel.",
+	"version": "0.1",
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["content.js"]
+		}
+	],
+	"options_page": "options.html",
+	"permissions": ["storage"]
+}
